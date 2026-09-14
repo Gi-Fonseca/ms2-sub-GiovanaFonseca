@@ -14,7 +14,7 @@ main {
 }
 
 /* Estilo do Logo / Título Barbearia (Estilo Desenho Animado) */
-.logo-mundo-da-lua, .logo-barbearia {
+.logo-barbearia {
     font-family: 'Impact', 'Arial Black', sans-serif;
     letter-spacing: 1.5px;
     color: #FFB703; /* Amarelo Cartoon */
