@@ -32,11 +32,10 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="container my-5">
 
-        <!-- 1. INÍCIO (HERO COM FUNDO CLARO E FOTO DO PICA-PAU) -->
+        <!-- 1. HERO -->
         <section class="bg-warning-subtle text-dark p-4 p-md-5 rounded-4 mb-5 border border-dark">
             <div class="row align-items-center">
                 
-                <!-- TEXTO DO LADO ESQUERDO -->
                 <div class="col-md-7 mb-4 mb-md-0">
                     <span class="badge bg-danger text-white mb-2 fs-6">✂️ BARBEARIA TEMÁTICA</span>
                     <h1 class="display-5 fw-bold text-danger">Sua juba sob controle!</h1>
@@ -48,7 +47,6 @@
                     </a>
                 </div>
 
-                <!-- 📷 FOTO DO PICA-PAU -->
                 <div class="col-md-5 text-center">
                     <img src="src/img/PicaPau.jpg" alt="Pica-Pau Barbeiro" class="img-fluid rounded-4 border border-dark bg-white p-2">
                 </div>
@@ -56,85 +54,55 @@
             </div>
         </section>
 
-        <!-- 2. SERVIÇOS E PREÇOS -->
+        <!-- 2. SERVIÇOS E PREÇOS (Renderizado via JS) -->
         <section id="servicos" class="mb-5">
             <h2 class="text-center text-danger fw-bold mb-4">Serviços & Preços</h2>
-            <div class="row g-3">
-                
-                <div class="col-md-4">
-                    <div class="card bg-white p-3 border border-dark text-center h-100">
-                        <h4 class="text-primary fw-bold">Corte Juba Domada</h4>
-                        <p class="text-muted">Corte completo na tesoura ou máquina.</p>
-                        <span class="badge bg-danger fs-5">R$ 35,00</span>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card bg-white p-3 border border-dark text-center h-100">
-                        <h4 class="text-primary fw-bold">Navalha Afiada</h4>
-                        <p class="text-muted">Barba completa com toalha quente.</p>
-                        <span class="badge bg-danger fs-5">R$ 25,00</span>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card bg-white p-3 border border-dark text-center h-100">
-                        <h4 class="text-danger fw-bold">Combo Por Um Fio</h4>
-                        <p class="text-muted">Corte + Barba + Sobrancelha.</p>
-                        <span class="badge bg-warning text-dark fs-5">R$ 55,00</span>
-                    </div>
-                </div>
-
+            <div id="lista-servicos" class="row g-3">
+                <!-- O JavaScript vai criar os cards aqui dentro -->
             </div>
         </section>
 
         <!-- 3. GALERIA DE FOTOS -->
-       <!-- 3. GALERIA DE FOTOS -->
-        <section id="galeria" class="mb-5">
-            <h2 class="text-center text-primary fw-bold mb-4">Galeria de Fotos</h2>
-            <div class="row g-3">
+<section id="galeria" class="mb-5">
+    <h2 class="text-center text-primary fw-bold mb-4">Galeria de Fotos</h2>
+    <div class="row g-3">
+        <div class="col-6 col-md-3">
+            <img src="src/img/corte1.jpg" alt="Espaço 1" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 180px;">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="src/img/corte2.jpg" alt="Espaço 2" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 180px;">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="src/img/corte3.jpg" alt="Espaço 3" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 180px;">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="src/img/corte4.jpg" alt="Espaço 4" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 180px;">
+        </div>
+    </div>
+</section>
+
+        <!-- 4. SOBRE O ESPAÇO -->
+        <section id="sobre" class="bg-warning p-4 p-md-5 rounded-4 mb-5 border border-dark">
+            <div class="row align-items-center">
                 
-                <div class="col-6 col-md-3">
-                    <img src="src/img/corte1.png" alt="Corte de Cabelo" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 200px;">
+                <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
+                    <h2 class="fw-bold text-dark mb-3">Sobre o Nosso Espaço</h2>
+                    <p class="fs-5 text-dark mb-2">
+                        "Venha mesmo que seja para cortar apenas um fio!"
+                    </p>
+                    <p class="text-dark mb-0 fs-6">
+                        Um ambiente divertido inspirado nos desenhos animados clássicos, com ar-condicionado, café gelado e bom papo.
+                    </p>
                 </div>
 
-                <div class="col-6 col-md-3">
-                    <img src="src/img/corte2.jpg" alt="Barba Feita" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 200px;">
-                </div>
-
-                <div class="col-6 col-md-3">
-                    <img src="src/img/corte3.jpg" alt="Espaço da Barbearia" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 200px;">
-                </div>
-
-                <div class="col-6 col-md-3">
-                    <img src="src/img/corte4.jpg" alt="Detalhe do Corte" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 200px;">
+                <div class="col-md-5 text-center">
+                    <img src="src/img/barbearia.png" alt="Espaço da Barbearia" class="img-fluid rounded-4 border border-dark bg-white p-2">
                 </div>
 
             </div>
         </section>
-<!-- 4. SOBRE O ESPAÇO -->
-<section id="sobre" class="bg-warning p-4 p-md-5 rounded-4 mb-5 border border-dark">
-    <div class="row align-items-center">
-        
-        <!-- TEXTO -->
-        <div class="col-md-7 text-center text-md-start mb-3 mb-md-0">
-            <h2 class="fw-bold text-dark mb-3">Sobre o Nosso Espaço</h2>
-            <p class="fs-5 text-dark mb-2">
-                "Venha mesmo que seja para cortar apenas um fio!"
-            </p>
-            <p class="text-dark mb-0">
-                Um ambiente divertido com ar-condicionado, café gelado e bom papo.
-            </p>
-        </div>
 
-        <!-- FOTO DO CENÁRIO -->
-        <div class="col-md-5 text-center">
-            <img src="src/img/barbearia.png" alt="Espaço da Barbearia" class="img-fluid rounded-4 border border-dark bg-white p-2">
-        </div>
-
-    </div>
-</section>
-        <!-- 5. FORMULÁRIO DE AGENDAMENTO -->
+        <!-- 5. AGENDAMENTO -->
         <section id="agendamento" class="mb-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
@@ -170,12 +138,37 @@
 
     </main>
 
+    <!-- MODAL DE CONFIRMAÇÃO DO SERVIÇO -->
+    <div class="modal fade" id="modalConfirmacao" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border border-dark rounded-4">
+                <div class="modal-header bg-warning border-bottom border-dark">
+                    <h5 class="modal-title fw-bold text-dark" id="modalLabel">Deseja agendar este serviço?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <p class="fs-5 mb-1">Você escolheu:</p>
+                    <h3 id="modalServicoNome" class="text-danger fw-bold mb-2"></h3>
+                    <span id="modalServicoPreco" class="badge bg-danger fs-5 mb-3"></span>
+                    <p class="text-muted mb-0">Deseja prosseguir para preencher seus dados?</p>
+                </div>
+                <div class="modal-footer bg-light border-top border-dark justify-content-center">
+                    <button type="button" class="btn btn-secondary border border-dark fw-bold" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="btnProsseguirAgendamento" class="btn btn-warning text-dark border border-dark fw-bold">✂️ Sim, Prosseguir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- RODAPÉ -->
     <footer class="bg-dark text-white text-center py-3 border-top border-dark">
-        <p class="mb-0">🪮 Por Um Fio - Barbearia</p>
+        <p class="mb-0">🪮 Por Um Fio Barbearia — Giovana</p>
     </footer>
 
     <!-- JS do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS do Projeto -->
+    <script src="src/js/script.js"></script>
 </body>
 </html>
