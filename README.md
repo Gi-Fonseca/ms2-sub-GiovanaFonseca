@@ -14,8 +14,10 @@ Site institucional da barbearia fictícia "Por Um Fio". A página apresenta os s
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Gi-Fonseca/Barbearia-Projeto.git
-   cd Barbearia-Projeto
+   git clone https://github.com/Gi-Fonseca/ms2-sub-GiovanaFonseca
+
+   cd ms2-sub-GiovanaFonseca
+   
    ```
 2. Instale as dependências:
    ```bash
