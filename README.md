@@ -48,9 +48,8 @@ Barbearia-Projeto/
 - **Galeria de Fotos** — grid responsivo de imagens do espaço
 - **Sobre o Espaço** — texto institucional
 - **Agendamento** — formulário de marcação de horário
-- **Modal de Confirmação** — confirma o serviço escolhido antes de prosseguir
 - **Footer** — rodapé com identificação da barbearia
 
-## 👩‍💻 Autora
+## 👩‍💻 Autor
 
 Giovana Fonseca
