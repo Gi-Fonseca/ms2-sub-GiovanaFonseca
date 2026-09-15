@@ -1,174 +1,110 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Por Um Fio Barbearia</title>
-    <!-- CSS do Bootstrap 5 -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por Um Fio Barbearia</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body class="bg-light text-dark">
-
-    <!-- MENU DO TOPO -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-danger navbar-dark border-bottom border-dark">
-            <div class="container">
-                <a class="navbar-brand text-warning fw-bold fs-3" href="#">🪮 Por Um Fio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="menu">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link text-white fw-bold" href="#servicos">Preços</a>
-                        <a class="nav-link text-white fw-bold" href="#galeria">Galeria</a>
-                        <a class="nav-link text-white fw-bold" href="#sobre">Sobre</a>
-                        <a class="nav-link text-warning fw-bold" href="#agendamento">Agendar</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="container my-5">
-
-        <!-- 1. HERO -->
-        <section class="bg-warning-subtle text-dark p-4 p-md-5 rounded-4 mb-5 border border-dark">
-            <div class="row align-items-center">
-                
-                <div class="col-md-7 mb-4 mb-md-0">
-                    <span class="badge bg-danger text-white mb-2 fs-6">✂️ BARBEARIA TEMÁTICA</span>
-                    <h1 class="display-5 fw-bold text-danger">Sua juba sob controle!</h1>
-                    <p class="fs-5">
-                        Seu cabelo tá parecendo juba de leão? Fique tranquilo, a gente resolve o seu visual no estilo e sem correria!
-                    </p>
-                    <a href="#agendamento" class="btn btn-warning text-dark fw-bold btn-lg border border-dark">
-                        💈 Agendar Horário
-                    </a>
-                </div>
-
-                <div class="col-md-5 text-center">
-                    <img src="src/img/PicaPau.jpg" alt="Pica-Pau Barbeiro" class="img-fluid rounded-4 border border-dark bg-white p-2">
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 2. SERVIÇOS E PREÇOS (Renderizado via JS) -->
-        <section id="servicos" class="mb-5">
-            <h2 class="text-center text-danger fw-bold mb-4">Serviços & Preços</h2>
-            <div id="lista-servicos" class="row g-3">
-                <!-- O JavaScript vai criar os cards aqui dentro -->
-            </div>
-        </section>
-
-        <!-- 3. GALERIA DE FOTOS -->
-<section id="galeria" class="mb-5">
-    <h2 class="text-center text-primary fw-bold mb-4">Galeria de Fotos</h2>
-    <div class="row g-3">
-        <div class="col-6 col-md-3">
-            <img src="src/img/corte1.jpg" alt="Espaço 1" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 180px;">
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-azul-escuro" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand logo" href="#inicio">✂ Por Um Fio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#agendamento">Agendar</a></li>
+          </ul>
         </div>
-        <div class="col-6 col-md-3">
-            <img src="src/img/corte2.jpg" alt="Espaço 2" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 180px;">
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-4 my-md-5">
+    <section id="inicio" class="hero row align-items-center rounded-4 p-4 p-md-5 g-4">
+      <div class="col-md-7">
+        <span class="text-amarelo fw-bold small">BARBEARIA TEMÁTICA</span>
+        <h1 class="text-amarelo display-4 fw-bold mt-2">Sua juba sob controle!</h1>
+        <p class="lead mb-4">Corte, barba e bom humor para deixar seu visual afiado.</p>
+        <a href="#agendamento" class="btn btn-amarelo btn-lg">Agendar horário</a>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="src/img/PicaPau.jpg" class="img-fluid rounded-circle foto-hero" alt="Pica-Pau barbeiro">
+      </div>
+    </section>
+
+    <section id="servicos" class="my-5">
+      <div class="text-center mb-4">
+        <span class="text-vermelho fw-bold small">ESCOLHA SEU ESTILO</span>
+        <h2 class="text-azul fw-bold mt-1">Serviços e preços</h2>
+      </div>
+      <div id="lista-servicos" class="row g-4"></div>
+    </section>
+
+    <section id="galeria" class="my-5">
+      <div class="text-center mb-4">
+        <span class="text-vermelho fw-bold small">POR DENTRO DA CASA</span>
+        <h2 class="text-azul fw-bold mt-1">Galeria</h2>
+      </div>
+      <div class="row g-3">
+        <div class="col-6 col-md-3"><img src="src/img/corte1.jpg" class="img-fluid w-100 foto-galeria rounded-3" alt="Corte na barbearia"></div>
+        <div class="col-6 col-md-3"><img src="src/img/corte2.jpg" class="img-fluid w-100 foto-galeria rounded-3" alt="Detalhe de corte"></div>
+        <div class="col-6 col-md-3"><img src="src/img/corte3.jpg" class="img-fluid w-100 foto-galeria rounded-3" alt="Corte masculino"></div>
+        <div class="col-6 col-md-3"><img src="src/img/corte4.jpg" class="img-fluid w-100 foto-galeria rounded-3" alt="Espaço da barbearia"></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about row align-items-center rounded-4 p-4 p-md-5 g-4 my-5">
+      <div class="col-md-7">
+        <span class="text-vermelho fw-bold small">SOBRE A POR UM FIO</span>
+        <h2 class="fw-bold mt-2">Venha cortar só um fio.</h2>
+        <p class="lead">Um ambiente divertido inspirado nos desenhos clássicos, com café gelado, ar-condicionado e bom papo.</p>
+        <p class="mb-0">Aqui, cada corte tem personalidade e cada cliente sai com uma história.</p>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="src/img/barbearia.png" class="img-fluid rounded-3 foto-sobre" alt="Interior da barbearia">
+      </div>
+    </section>
+
+    <section id="agendamento" class="row justify-content-center my-5">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="text-center mb-4">
+          <span class="text-vermelho fw-bold small">VAMOS MARCAR?</span>
+          <h2 class="text-azul fw-bold mt-1">Marque seu horário</h2>
         </div>
-        <div class="col-6 col-md-3">
-            <img src="src/img/corte3.jpg" alt="Espaço 3" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 180px;">
-        </div>
-        <div class="col-6 col-md-3">
-            <img src="src/img/corte4.jpg" alt="Espaço 4" class="img-fluid rounded border border-dark w-100 object-fit-cover" style="height: 180px;">
-        </div>
-    </div>
-</section>
+        <form id="form-agendamento" class="bg-white border rounded-4 shadow-sm p-4">
+          <div class="mb-3">
+            <label class="form-label fw-bold" for="nome">Seu nome:</label>
+            <input id="nome" type="text" class="form-control" placeholder="Ex.: Pica-Pau" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold" for="whatsapp">WhatsApp:</label>
+            <input id="whatsapp" type="tel" class="form-control" placeholder="(11) 99999-9999" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold" for="servico">Serviço:</label>
+            <select id="servico" class="form-select" required></select>
+          </div>
+          <button class="btn btn-vermelho w-100" type="submit">Confirmar agendamento</button>
+          <p id="mensagem-form" class="text-center text-azul mt-3 mb-0" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-        <!-- 4. SOBRE O ESPAÇO -->
-        <section id="sobre" class="bg-warning p-4 p-md-5 rounded-4 mb-5 border border-dark">
-            <div class="row align-items-center">
-                
-                <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
-                    <h2 class="fw-bold text-dark mb-3">Sobre o Nosso Espaço</h2>
-                    <p class="fs-5 text-dark mb-2">
-                        "Venha mesmo que seja para cortar apenas um fio!"
-                    </p>
-                    <p class="text-dark mb-0 fs-6">
-                        Um ambiente divertido inspirado nos desenhos animados clássicos, com ar-condicionado, café gelado e bom papo.
-                    </p>
-                </div>
+  <footer class="bg-azul-escuro text-white text-center py-4 mt-3">
+    <p class="logo mb-1">Por Um Fio Barbearia</p>
+    <small>Um corte de cada vez, sempre com estilo.</small>
+  </footer>
 
-                <div class="col-md-5 text-center">
-                    <img src="src/img/barbearia.png" alt="Espaço da Barbearia" class="img-fluid rounded-4 border border-dark bg-white p-2">
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 5. AGENDAMENTO -->
-        <section id="agendamento" class="mb-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="bg-white p-4 rounded-4 border border-dark">
-                        <h3 class="text-danger fw-bold text-center mb-3">Marque seu Horário</h3>
-                        
-                        <form>
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Seu Nome:</label>
-                                <input type="text" class="form-control border-dark" placeholder="Ex: Pica-Pau" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">WhatsApp:</label>
-                                <input type="tel" class="form-control border-dark" placeholder="(11) 99999-9999" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Serviço:</label>
-                                <select class="form-select border-dark">
-                                    <option>Corte Juba Domada - R$ 35,00</option>
-                                    <option>Navalha Afiada - R$ 25,00</option>
-                                    <option>Combo Por Um Fio - R$ 55,00</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-warning text-dark fw-bold w-100 border border-dark">
-                                ✂️ Confirmar Agendamento
-                            </button>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- MODAL DE CONFIRMAÇÃO DO SERVIÇO -->
-    <div class="modal fade" id="modalConfirmacao" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border border-dark rounded-4">
-                <div class="modal-header bg-warning border-bottom border-dark">
-                    <h5 class="modal-title fw-bold text-dark" id="modalLabel">Deseja agendar este serviço?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body text-center py-4">
-                    <p class="fs-5 mb-1">Você escolheu:</p>
-                    <h3 id="modalServicoNome" class="text-danger fw-bold mb-2"></h3>
-                    <span id="modalServicoPreco" class="badge bg-danger fs-5 mb-3"></span>
-                    <p class="text-muted mb-0">Deseja prosseguir para preencher seus dados?</p>
-                </div>
-                <div class="modal-footer bg-light border-top border-dark justify-content-center">
-                    <button type="button" class="btn btn-secondary border border-dark fw-bold" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" id="btnProsseguirAgendamento" class="btn btn-warning text-dark border border-dark fw-bold">✂️ Sim, Prosseguir</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- RODAPÉ -->
-    <footer class="bg-dark text-white text-center py-3 border-top border-dark">
-        <p class="mb-0">🪮 Por Um Fio Barbearia — Giovana</p>
-    </footer>
-
-    <!-- JS do Bootstrap -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- JS do Projeto -->
-    <script src="src/js/script.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="src/js/script.js"></script>
 </body>
 </html>

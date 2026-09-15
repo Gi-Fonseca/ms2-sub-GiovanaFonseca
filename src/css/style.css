@@ -1,66 +1,19 @@
-/* Importa a estrutura do Bootstrap via NPM */
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #F8F5EE !important; /* Fundo Creme estilo Papel de Gibi */
-    color: #1D212A;
-}
-
-main {
-    flex: 1;
-}
-
-/* Estilo do Logo / Título Barbearia (Estilo Desenho Animado) */
-.logo-mundo-da-lua, .logo-barbearia {
-    font-family: 'Impact', 'Arial Black', sans-serif;
-    letter-spacing: 1.5px;
-    color: #FFB703; /* Amarelo Cartoon */
-    text-shadow: 3px 3px 0px #1D212A, -1px -1px 0px #1D212A; /* Sombra seca 3D de quadrinho */
-    transform: rotate(-2deg); /* Leve inclinação descontraída de desenho animado */
-    display: inline-block;
-}
-
-/* Hero estilizado com Azul Pica-Pau */
-.hero-retro {
-    background: linear-gradient(135deg, #1B4965 0%, #0F2B3C 100%);
-    border-bottom: 4px solid #1D212A;
-}
-
-/* Caixa com a frase emblemática (Balão de Destaque) */
-.blockquote-frase {
-    background-color: #FFB703 !important; /* Amarelo Vibrante */
-    color: #1D212A !important;
-    border: 3px solid #1D212A !important;
-    box-shadow: 4px 4px 0px #1D212A;
-    font-weight: bold;
-}
-
-/* Efeito Cartoon Pop-Art nos Cards */
-.card-Missao {
-    border: 3px solid #1D212A !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.card-Missao:hover {
-    transform: translateY(-4px);
-    border-color: #E63946 !important; /* Vermelho Topete no Hover */
-    box-shadow: 6px 6px 0px #1D212A !important; /* Sombra seca estilo HQ em vez de glow */
-}
-
-/* Badges de Status */
-.badge-status-confirmado {
-    background-color: rgba(27, 73, 101, 0.15);
-    color: #1B4965;
-    border: 2px solid #1B4965;
-    font-weight: bold;
-}
-
-.badge-status-adiado {
-    background-color: rgba(230, 57, 70, 0.15);
-    color: #E63946;
-    border: 2px solid #E63946;
-    font-weight: bold;
-}
+:root { --azul: #1b4965; --escuro: #0f2b3c; --amarelo: #ffb703; --vermelho: #e63946; --creme: #f8f5ee; }
+body { min-height: 100vh; display: flex; flex-direction: column; background: var(--creme); }
+main { flex: 1; }
+.bg-azul { background: var(--azul); }
+.bg-azul-escuro { background: var(--escuro); }
+.bg-amarelo { background: var(--amarelo); }
+.text-azul { color: var(--azul); }
+.text-amarelo, .logo { color: var(--amarelo) !important; }
+.logo { font-family: Impact, sans-serif; }
+.btn-amarelo { background: var(--amarelo); border: 2px solid #1d212a; color: #1d212a; font-weight: bold; }
+.btn-vermelho { background: var(--vermelho); color: white; font-weight: bold; }
+.foto-hero { max-width: 260px; border: 4px solid #1d212a; }
+.foto-galeria { height: 180px; object-fit: cover; }
+.foto-sobre { max-height: 220px; object-fit: cover; }
+.service-icon { font-size: 2rem; }
+.service-price { background: var(--amarelo); }
+@media (max-width: 575px) { .foto-galeria { height: 130px; } }
